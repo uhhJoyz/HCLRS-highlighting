@@ -7,4 +7,9 @@ A Visual Studio Code extension to enable syntax highlighting in UVA's special HC
 
 ## Installation
 
-In order to install, simply locate your Visual Studio Code's extension directory (by default C:/**insert user**/.vscode/extensions/ on Windows) and copy and paste this exension into the folder. On opening .hcl files, the extension will automatically highlight them according to your theme's settings.
+In order to install, first locate your Visual Studio Code's extension directory:
+- ***Windows***: **USER_PROFILE**/.vscode/extensions/
+- ***macOS***: ~/.vscode/extensions
+- ***Linux***: ~/.vscode/extensions
+Copy and paste this exension into the folder.
+Upon opening .hcl files, the extension will automatically highlight them according to your theme's settings.
