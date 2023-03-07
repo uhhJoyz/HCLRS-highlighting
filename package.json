@@ -1,0 +1,25 @@
+{
+  "name": "HCLRS",
+  "displayName": "HCLRS",
+  "description": "HCLRS programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "hclrs",
+      "aliases": ["HCLRS", "hclrs"],
+      "extensions": [".hcl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "hclrs",
+      "scopeName": "source.hcl",
+      "path": "./syntaxes/hclrs.tmLanguage.json"
+    }]
+  }
+}

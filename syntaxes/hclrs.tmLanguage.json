@@ -1,0 +1,72 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "HCLRS",
+	"patterns": [
+		{
+			"include": "#constants"
+		},
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#ifuns"
+        },
+        {
+            "include": "#instructions"
+        },
+        {
+            "include": "#fixed-function"
+        },
+        {
+            "include": "#large-register"
+        },
+        {
+            "include": "#small-register"
+        }
+	],
+	"repository": {
+        "constants": {
+			"patterns": [{
+                "name": "variable.other.property",
+				"match": "\\b(STAT_BUB|STAT_AOK|STAT_HLT|STAT_ADR|STAT_INS|STAT_PIP|REG_RAX|REG_RCX|REG_RDX|REG_RSP|REG_RSI|REG_RDI|REG_R8|REG_R9|REG_R11|REG_R12|REG_R13|REG_R14|REG_NONE)\\b"
+			}]
+		},
+        "ifuns": {
+            "patterns": [{
+                "name": "keyword.control.hclrs",
+                "match": "\\b(ALWAYS|LE|LT|EQ|NE|GE|GT|ADDQ|SUBQ|ANDQ|XORQ)\\b"
+            }]
+        },
+        "instructions": {
+            "patterns": [{
+                "name": "entity.name.class.hclrs",
+                "match": "\\b(HALT|NOP|RRMOVQ|IRMOVQ|RMMOVQ|MRMOVQ|OPQ|JXX|CALL|RET|PUSHQ|POPQ|CMOVXX)\\b"
+            }]
+        },
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.hclrs",
+                "match": "\\b(register|wire)\\b"
+            }]
+        },
+        "large-register": {
+            "patterns": [{
+                "name": "entity.name.function",
+                "match": "\\b((F_|D_|E_|M_|W_)(\\w*))\\b"
+            }]
+        },
+        "small-register": {
+            "patterns": [{
+                "name": "support.constant",
+                "match": "\\b((f_|d_|e_|m_)(\\w*))\\b"
+            }]
+        },
+        "fixed-function": {
+            "patterns": [{
+                "name": "string.embedded.begin",
+                "match": "\\b(Stat|pc|reg_srcA|reg_srcB|reg_dstE|reg_dstM|reg_inputE|reg_inputM|mem_writebit|mem_readbit|mem_addr|mem_input|i10bytes|reg_outputA|reg_outputB|mem_output|stall_(\\w*)|bubble_(\\w*))\\b"
+            }]
+        }
+	},
+	"scopeName": "source.hcl"
+}
