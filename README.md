@@ -12,6 +12,6 @@ In order to install, first locate your Visual Studio Code's extension directory:
 - ***macOS***: ~/.vscode/extensions
 - ***Linux***: ~/.vscode/extensions
 
-Download the repository as a ZIP file, then unzip it into its owen folder in your extensions directory.
+Download the repository as a ZIP file, then unzip it into its own folder in your extensions directory.
 
 Upon opening .hcl files, the extension will automatically highlight them according to your theme's settings.
